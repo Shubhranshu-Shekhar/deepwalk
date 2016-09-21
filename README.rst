@@ -48,8 +48,6 @@ Requirements
 
 (may have to be independently installed) 
 
-
-
 Installation
 ------------
 #. cd deepwalk
