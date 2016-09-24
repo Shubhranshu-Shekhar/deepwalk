@@ -53,14 +53,14 @@ class Graph(defaultdict):
     return subgraph
 
   def make_undirected(self):
-  
+
     t0 = time()
 
     for v in self.keys():
       for other in self[v]:
         if v != other:
           self[other].append(v)
-    
+
     t1 = time()
     logger.info('make_directed: added missing edges {}s'.format(t1-t0))
 
@@ -125,7 +125,7 @@ class Graph(defaultdict):
     "Returns the number of nodes in the graph"
     return order()
 
-  def random_walk(self, path_length, alpha=0, rand=random.Random(), start=None):
+  def random_walk(self, path_length, alpha=0, rand=random.Random(), start=None, meta_path=None):
     """ Returns a truncated random walk.
 
         path_length: Length of the random walk.
